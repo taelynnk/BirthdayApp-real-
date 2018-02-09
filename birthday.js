@@ -10,3 +10,8 @@ function birthdayCountDown(date) {
 
     return ("There are " + days+ " days until your birthday");
 }
+
+function incorrectBirthDate(date) {
+    var birthInput = new Date(mm/dd/yyyy);
+
+}
