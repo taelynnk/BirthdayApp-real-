@@ -13,5 +13,11 @@ function birthdayCountDown(date) {
 
 function incorrectBirthDate(date) {
     var birthInput = new Date(mm/dd/yyyy);
-
+    if (birthInput === mmddyyy) {
+         return "Sorry, but you did not enter a date in the correct format.";
+    } else if (birthInput === mm-dd-yyyy) {
+        return "Sorry, but you did not enter a date in the correct format.";
+    } else (birthInput === mm/dd/yyyy) {
+        return myBirthday;
+    }
 }
