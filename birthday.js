@@ -19,3 +19,4 @@ function incorrectBirthDate(date) {
     } else {
         return myBirthday;
     }
+}
