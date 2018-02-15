@@ -13,9 +13,8 @@ function birthdayCountDown(date) {
     return ("There are " + days + " days until your birthday");
 }
 
-function incorrectBirthDate(date) {
+function incorrectBirthDate(inputBirthday) {
     var birthInput = new Date(mm / dd / yyyy);
-    var birthInput = new Date(date);
 if (birthInput !== date) {
     return "Sorry, but you did not enter a date in the correct format.";
 } else {
