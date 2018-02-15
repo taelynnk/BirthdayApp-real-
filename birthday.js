@@ -15,14 +15,13 @@ function birthdayCountDown(date) {
 
 function incorrectBirthDate(date) {
     var birthInput = new Date(mm / dd / yyyy);
-}
-var birthInput = new Date(date);
+    var birthInput = new Date(date);
 if (birthInput !== date) {
     return "Sorry, but you did not enter a date in the correct format.";
 } else {
     return myBirthday;
+  }
 }
-
 function calculateAge(inputBirthday) {
     var today = new Date();
     var birthday = new Date(inputBirthday);
