@@ -1,3 +1,5 @@
+var button = document.getElementById('countdownbutton');
+
 function birthdayCountDown(date) {
     var today = new Date();
     var myBirthday = new Date(date);
@@ -8,10 +10,15 @@ function birthdayCountDown(date) {
     var diff = myBirthday.getTime() - today.getTime();
     var days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
-    return ("There are " + days+ " days until your birthday");
+    return (days);
 }
 
-function incorrectBirthDate(date) {
-    var birthInput = new Date(mm/dd/yyyy);
+function displayBirthdayCountDown() {
+    var input = document.getElementById('inputNum').value;
+    var result = birthdayCountDown(date);
+    return document.getElementById('prime').textContent = "This is how many days are left until your next birthday" + days;
 
 }
+
+
+button.addEventListener('click', birthdayCountDown);
