@@ -1,8 +1,8 @@
 var button = document.getElementById('countdownbutton');
 
-function birthdayCountDown(date) {
+function birthdayCountDown(inputdate) {
     var today = new Date();
-    var myBirthday = new Date(date);
+    var myBirthday = new Date(inputdate);
     myBirthday.setFullYear(today.getFullYear());
     if (today.getTime() > myBirthday.getTime()) {
         myBirthday.setFullYear(today.getFullYear() + 1);
@@ -13,11 +13,9 @@ function birthdayCountDown(date) {
 }
 
 function displayBirthdayCountDown() {
-    var input = document.getElementById('inputNum').value;
-    var result = birthdayCountDown(date);
-    return document.getElementById('prime').textContent = "This is how many days are left until your next birthday" + days;
-    return ("There are " + days + " days until your birthday");
+    var input = document.getElementById('inputdate').value;
+    var countdown = birthdayCountDown(date);
+    return document.getElementById('countdown').textContent = "Days left until your next birthday" + days;
 }
 
-
-button.addEventListener('click', birthdayCountDown);
+button.getEventListener('click', displayBirthdayCountDown);
