@@ -1,21 +1,22 @@
 var button = document.getElementById('countdownbutton');
 
-function birthdayCountDown(inputdate) {
+function countdownbutton(inputdate) {
     var today = new Date();
-    var myBirthday = new Date(inputdate);
+    var myBirthday = new Date(inputdate) ;
     myBirthday.setFullYear(today.getFullYear());
     if (today.getTime() > myBirthday.getTime()) {
-        myBirthday.setFullYear(today.getFullYear() + 1);
+        myBirthday.setFullYear(today.getFullYear() );
     }
     var diff = myBirthday.getTime() - today.getTime();
-    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    var days = Math.floor(diff / (1000 * 60 * 60 * 24)) + 1;
+
     return (days);
 }
 
-function displayBirthdayCountDown() {
+function displaycountdownbutton() {
     var input = document.getElementById('inputdate').value;
-    var countdown = birthdayCountDown(date);
-    return document.getElementById('countdown').textContent = "Days left until your next birthday" + days;
+    var countdown = countdownbutton(input);
+    return document.getElementById('countdown').textContent = countdown + " day(s) until your next birthday!";
 }
 
-button.getEventListener('click', displayBirthdayCountDown);
+button.addEventListener('click', displaycountdownbutton);
