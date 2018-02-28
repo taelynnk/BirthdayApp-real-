@@ -1,11 +1,9 @@
-function incorrectBirthDate(inputBirthday) {
-    var birthInput = new Date(mm/dd/yyyy);
-    var mm = "123456789101112"
-    var dd = "123456789101112"
-    var yyyy = "123456789101112"
-if (birthInput !== date) {
-    return "Sorry, but you did not enter a date in the correct format.";
-} else {
-    return myBirthday;
-  }
+function BirthDateCheck(inputNum) {
+    var birthInput = mm/dd/yyyy;
+    var d = new Date(birthInput);
+if (birthInput.length < 10) {
+    f(isNaN(d.getTime())) {
+    } else {
+        return "That isn't the correct format for a birth date.";
+    }
 }
