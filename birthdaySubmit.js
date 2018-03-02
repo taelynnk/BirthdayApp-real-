@@ -1,4 +1,4 @@
-var myButton = document.getElementById('calculateAge');
+var myButton = document.getElementById('birthdayButton');
 function calculateAge(inputBirthday) {
     var today = new Date();
     var birthday = new Date(inputBirthday);
@@ -6,9 +6,9 @@ function calculateAge(inputBirthday) {
 }
 
 
-function findZodiac(birthdate) {
-    var month = birthdate.getMonth() + 1;
-    var day = birthdate.getDate() + 1;
+function findZodiac(date) {
+    var month = date.getMonth() + 1;
+    var day = date.getDate() + 1;
         if ((sign.getMonth() == 2 && sign.getDate() >= 21 || sign.getMonth() == 3 && sign.getDate() <= 19)) {
             return "Aries";
         } else if ((sign.getMonth() == 3 && sign.getDate() >= 20 || sign.getMonth() == 4 && sign.getDate() <= 20)) {
@@ -39,9 +39,9 @@ function findZodiac(birthdate) {
 
 
 
-function countdownbutton(inputdate) {
+function countdownbutton(date) {
     var today = new Date();
-    var myBirthday = new Date(inputdate) ;
+    var myBirthday = new Date(date) ;
     myBirthday.setFullYear(today.getFullYear());
     if (today.getTime() > myBirthday.getTime()) {
         myBirthday.setFullYear(today.getFullYear() );
@@ -51,5 +51,20 @@ function countdownbutton(inputdate) {
 
     return (days);
 }
+
+function displayAllOutputs() {
+    var input = document.getElementById('inputBirthday').value;
+    if (BirthDateCheck(input)==false) {
+        document.getElementById('inputBirthday').textContent = "Please enter your birthday in the mm/dd/yyyy format."
+    } else{
+    var date = new Date (input);
+    var age = calculateAge(date);
+    var countDown = countdownbutton(date);
+    var zodiacSign = findZodiac(date);
+    document.getElementById('allOutputs').textContent = "You are " + age + " years old." , "<hr/>", "There are " + countDown + "day(s) until your next birthday." , "<hr/>" , "Your zodiac sign is " + zodiacSign + ".";
+
+    }
+}
+myButton.addEventListener('click', displayAllOutputs);
 
 
