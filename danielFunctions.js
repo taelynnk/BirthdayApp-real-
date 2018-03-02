@@ -1,11 +1,11 @@
-function BirthDateCheck(inputNum) {
-    var birthInput = mm/dd/yyyy;
+function BirthDateCheck() {
+    var birthInput = "12";
     var d = new Date(birthInput);
 if (birthInput.length < 10) {
-    f(isNaN(d.getTime())) {
+    if (isNaN(d.getTime())) {
     } else {
         return "That isn't the correct format for a birth date.";
     }
-}
+  }
 }
     button.addEventListener('click', BirthDateCheck);
