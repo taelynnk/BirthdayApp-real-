@@ -5,15 +5,6 @@ function calculateAge(inputBirthday) {
     return Math.floor((new Date() - birthday) / 1000 / 60 / 60 / 24 / 365);
 }
 
-function displayCalculatedAge() {
-    var input = document.getElementById('inputBirthday').value;
-    var age = calculateAge(input);
-    document.getElementById('age').textContent = "You are " + age + " years of age.";
-}
-myButton.addEventListener('click', displayCalculatedAge);
-
-
-var button2 = document.getElementById('findZodiac');
 
 function findZodiac(inputZodiac) {
     this.birthday = new Date(inputZodiac);
@@ -49,16 +40,8 @@ function findZodiac(inputZodiac) {
     }
 }
 
-    function displayfindZodiac () {
-        var input = document.getElementById('inputZodiac').value;
-        var zodiacSign = findZodiac(input);
-        return document.getElementById('zodiacSign').textContent = zodiacSign;
 
-    }
 
-    button2.addEventListener('click', displayfindZodiac);
-
-var button = document.getElementById('countdownbutton');
 
 function countdownbutton(inputdate) {
     var today = new Date();
@@ -73,10 +56,4 @@ function countdownbutton(inputdate) {
     return (days);
 }
 
-function displaycountdownbutton() {
-    var input = document.getElementById('inputdate').value;
-    var countdown = countdownbutton(input);
-    return document.getElementById('countdown').textContent = countdown + " day(s) until your next birthday!";
-}
 
-button.addEventListener('click', displaycountdownbutton);
