@@ -1,4 +1,4 @@
-var myButton = document.getElementById('outputs');
+var myButton = document.getElementById('birthdayButton');
 function calculateAge(inputBirthday) {
     var today = new Date();
     var birthday = new Date(inputBirthday);
