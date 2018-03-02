@@ -57,18 +57,31 @@ function findZodiac(date) {
     function displayAllOutputs() {
         var input = document.getElementById('inputBirthday').value;
         if (BirthDateCheck(input) == false) {
-            document.getElementById('inputBirthday').textContent = "Please enter your birthday in the mm/dd/yyyy format."
+            document.getElementById('inputBirthday').value = "mm/dd/yyyy"
         } else {
             var date = new Date(input);
             var age = calculateAge(date);
             var countDown = countdownbutton(date);
             var zodiacSign = findZodiac(date);
-            document.getElementById('allOutputs').textContent = "You are " + age + " years old. There are " + countDown + "day(s) until your next birthday. Your zodiac sign is " + zodiacSign + ".";
+            document.getElementById('allOutputs').textContent = "You are " + age + " years old. There are " + countDown + " day(s) until your next birthday. Your zodiac sign is " + zodiacSign + ".";
 
         }
     }
 
-function BirthDateCheck() {
-    return true;
+function BirthDateCheck(input) {
+if (input.length == 10) {
+    var d = new Date(input);
+    if (isNaN(d.getTime())) {
+        return false;
+    } else {
+        return true;
+    }
+  }
+    return false;
 }
+  //***  var format = document.getElementById("inputBirthday").value;
+   // var check1 = format.substring(2, 3);
+    //var check2 = format.substring(5, 6);
+    //if ((check1 == "/") && (check2 =="/") && (format.length == 10)) //
+
 
