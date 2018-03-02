@@ -7,3 +7,5 @@ if (birthInput.length < 10) {
         return "That isn't the correct format for a birth date.";
     }
 }
+}
+    button.addEventListener('click', BirthDateCheck);
