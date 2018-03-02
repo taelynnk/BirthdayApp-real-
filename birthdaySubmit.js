@@ -6,11 +6,9 @@ function calculateAge(inputBirthday) {
 }
 
 
-function findZodiac(inputZodiac) {
-    this.birthday = new Date(inputZodiac);
-
-    this.getSign = function () {
-        var sign = new Date(birthday);
+function findZodiac(birthdate) {
+    var month = birthdate.getMonth() + 1;
+    var day = birthdate.getDate() + 1;
         if ((sign.getMonth() == 2 && sign.getDate() >= 21 || sign.getMonth() == 3 && sign.getDate() <= 19)) {
             return "Aries";
         } else if ((sign.getMonth() == 3 && sign.getDate() >= 20 || sign.getMonth() == 4 && sign.getDate() <= 20)) {
@@ -36,8 +34,6 @@ function findZodiac(inputZodiac) {
         } else if ((sign.getMonth() == 1 && sign.getDate() >= 19 || sign.getMonth() == 2 && sign.getDate() <= 20)) {
             return "Pisces";
         }
-
-    }
 }
 
 
